@@ -1,18 +1,21 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span>Custom Toolbar</span>
-    </mat-toolbar-row>
+<article>
+    <h1>Quem Somos:</h1>
+    <p>
+        O Instituto Equale é uma associação sem fins lucrativos,
+        que visa fortalecer comunidades e projetos que promovam a melhoria da rede
+        pública de ensino da Região Metropolitana de Belo Horizonte.
+    </p>
+</article>
 
-    <mat-toolbar-row>
-        <span>Second Line</span>
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-    </mat-toolbar-row>
+<article>
+    <h1>Nossa Meta:</h1>
+    <p class="goal"><strong>R$ 10000,00</strong> / <strong>R$ 100000,00</strong></p>
+</article>
 
-    <mat-toolbar-row>
-        <span>Third Line</span>
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-    </mat-toolbar-row>
-</mat-toolbar>
+<article>
+    <h1>Conheça Nossos Alunos:</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+        <app-student-card *ngFor="let student of studentSample" [id]="student"></app-student-card>
+    </div>
+</article>
+
