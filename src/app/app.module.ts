@@ -12,24 +12,36 @@ import { StudentCardComponent } from './student-card/student-card.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { StudentCaseComponent } from './student-case/student-case.component';
+import { StudentRegisterComponent } from './student-register/student-register.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    StudentCardComponent
+      AppComponent,
+      HomeComponent,
+      StudentCardComponent,
+      StudentCaseComponent,
+      StudentRegisterComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
+      BrowserModule.withServerTransition({ appId: 'serverApp' }),
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      FlexLayoutModule,
+      ReactiveFormsModule,
 
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatCardModule,
-    MatButtonModule
+      MatToolbarModule,
+      MatIconModule,
+      MatMenuModule,
+      MatCardModule,
+      MatButtonModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

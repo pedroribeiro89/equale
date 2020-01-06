@@ -1,0 +1,63 @@
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <h1>Formulário de cadastro</h1>
+<!--    <mat-form-field>-->
+<!--        <input matInput placeholder="Nome" type="text" formControlName="name" required>-->
+<!--    </mat-form-field>-->
+<!--    foto-->
+    <mat-form-field>
+        <input matInput placeholder="Nome" type="text" formControlName="name" required>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput placeholder="Descreva sua história" type="text" formControlName="case" required>
+        </textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Cursinho</mat-label>
+        <select matNativeControl formControlName="school" required>
+            <option value="1">Cursinho 1</option>
+            <option value="2">Cursinho 2</option>
+            <option value="3">Cursinho 3</option>
+            <option value="4">Cursinho 4</option>
+        </select>
+    </mat-form-field>
+    <fieldset formGroupName="address">
+        <legend>Endereço</legend>
+        <mat-form-field>
+            <input matInput placeholder="CEP" type="number" formControlName="cep" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Rua" type="text" formControlName="street" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Número" type="number" formControlName="number" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Complemento" type="text" formControlName="complement" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cidade" type="text" formControlName="city" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Estado</mat-label>
+            <select matNativeControl formControlName="state" required>
+                <option value="1">MG</option>
+                <option value="2">SP</option>
+                <option value="3">RJ</option>
+                <option value="4">RS</option>
+            </select>
+        </mat-form-field>
+    </fieldset>
+    <mat-form-field>
+        <input matInput placeholder="Email" type="text" formControlName="email" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Telefone para contato" type="number" formControlName="phone" required>
+    </mat-form-field>
+
+</form>
