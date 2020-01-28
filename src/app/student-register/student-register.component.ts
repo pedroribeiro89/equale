@@ -25,11 +25,23 @@ export class StudentRegisterComponent implements OnInit {
     phone: ['', Validators.required]
   });
 
+  public imgUrl: string;
+
   constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  onSubmit() {}
+  onSubmit() { console.log('submit'); }
+
+  onSelectImage(event) {
+    if (event.target.files && event.target.files[0]) {
+      const reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+      reader.onload = (onloadEvent) => { // called once readAsDataURL is completed
+        this.imgUrl = onloadEvent.target.result as string;
+      };
+    }
+    console.log(this.studentForm);
+  }
 
 }

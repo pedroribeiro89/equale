@@ -1,10 +1,19 @@
-
 <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
     <h1>Formulário de cadastro</h1>
-<!--    <mat-form-field>-->
-<!--        <input matInput placeholder="Nome" type="text" formControlName="name" required>-->
-<!--    </mat-form-field>-->
-<!--    foto-->
+
+    <img *ngIf="imgUrl" [src]="imgUrl" height="200"> <br/>
+
+    <input placeholder="Sua Foto"
+               type="file"
+               formControlName="photo"
+               required
+               hidden
+               #imgInput
+               accept="image/*"
+               (change)="onSelectImage($event)">
+
+    <button class="fileButton" mat-raised-button (click)="imgInput.click()">Selecionar Foto</button>
+
     <mat-form-field>
         <input matInput placeholder="Nome" type="text" formControlName="name" required>
     </mat-form-field>
@@ -59,5 +68,7 @@
     <mat-form-field>
         <input matInput placeholder="Telefone para contato" type="number" formControlName="phone" required>
     </mat-form-field>
+
+    <button mat-raised-button type="submit" [disabled]="studentForm.invalid">Cadastrar</button>
 
 </form>

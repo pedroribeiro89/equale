@@ -18,32 +18,34 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [
-      AppComponent,
-      HomeComponent,
-      StudentCardComponent,
-      StudentCaseComponent,
-      StudentRegisterComponent
-  ],
-  imports: [
-      BrowserModule.withServerTransition({ appId: 'serverApp' }),
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      FlexLayoutModule,
-      ReactiveFormsModule,
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        StudentCardComponent,
+        StudentCaseComponent,
+        StudentRegisterComponent,
+        LoginComponent
+    ],
+    imports: [
+        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        ReactiveFormsModule,
 
-      MatToolbarModule,
-      MatIconModule,
-      MatMenuModule,
-      MatCardModule,
-      MatButtonModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatSelectModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+        MatToolbarModule,
+        MatIconModule,
+        MatMenuModule,
+        MatCardModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
